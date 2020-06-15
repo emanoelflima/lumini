@@ -1,0 +1,3 @@
+scorecard/scorecard-web/bin/
+scorecard/scorecard-web/obj/
+*.csv
