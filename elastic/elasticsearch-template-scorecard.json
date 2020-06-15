@@ -1,0 +1,5963 @@
+{
+  "index_patterns": ["scorecard"],
+  "settings" : {
+      "number_of_shards": 1,
+    "index.mapping.total_fields.limit": 10000
+    },
+  "mappings": {
+    "_source": {
+      "enabled": true
+    },
+    "properties": {
+      				"id": {
+				  "type": "integer"
+				},
+				"ope8_id": {
+				  "type": "integer"
+				},
+				"ope6_id": {
+				  "type": "integer"
+				},
+				"school.name": {
+				  "type": "keyword"
+				},
+				"school.city": {
+				  "type": "keyword"
+				},
+				"school.state": {
+				  "type": "keyword"
+				},
+				"school.zip": {
+				  "type": "keyword"
+				},
+				"school.accreditor": {
+				  "type": "keyword"
+				},
+				"school.school_url": {
+				  "type": "keyword"
+				},
+				"school.price_calculator_url": {
+				  "type": "keyword"
+				},
+				"school.degrees_awarded.predominant_recoded": {
+				  "type": "integer"
+				},
+				"school.under_investigation": {
+				  "type": "integer"
+				},
+				"school.main_campus": {
+				  "type": "integer"
+				},
+				"school.branches": {
+				  "type": "integer"
+				},
+				"school.degrees_awarded.predominant": {
+				  "type": "integer"
+				},
+				"school.degrees_awarded.highest": {
+				  "type": "integer"
+				},
+				"school.ownership": {
+				  "type": "integer"
+				},
+				"school.state_fips": {
+				  "type": "integer"
+				},
+				"school.region_id": {
+				  "type": "integer"
+				},
+				"school.locale": {
+				  "type": "integer"
+				},
+				"school.degree_urbanization": {
+				  "type": "integer"
+				},
+				"location.lat": {
+				  "type": "double"
+				},
+				"location.lon": {
+				  "type": "double"
+				},
+				"school.carnegie_basic": {
+				  "type": "integer"
+				},
+				"school.carnegie_undergrad": {
+				  "type": "integer"
+				},
+				"school.carnegie_size_setting": {
+				  "type": "integer"
+				},
+				"school.minority_serving.historically_black": {
+				  "type": "integer"
+				},
+				"school.minority_serving.predominantly_black": {
+				  "type": "integer"
+				},
+				"school.minority_serving.annh": {
+				  "type": "integer"
+				},
+				"school.minority_serving.tribal": {
+				  "type": "integer"
+				},
+				"school.minority_serving.aanipi": {
+				  "type": "integer"
+				},
+				"school.minority_serving.hispanic": {
+				  "type": "integer"
+				},
+				"school.minority_serving.nant": {
+				  "type": "integer"
+				},
+				"school.men_only": {
+				  "type": "integer"
+				},
+				"school.women_only": {
+				  "type": "integer"
+				},
+				"school.religious_affiliation": {
+				  "type": "integer"
+				},
+				"admissions.admission_rate.overall": {
+				  "type": "double"
+				},
+				"admissions.admission_rate.by_ope_id": {
+				  "type": "double"
+				},
+				"admissions.sat_scores.25th_percentile.critical_reading": {
+				  "type": "double"
+				},
+				"admissions.sat_scores.75th_percentile.critical_reading": {
+				  "type": "double"
+				},
+				"admissions.sat_scores.25th_percentile.math": {
+				  "type": "double"
+				},
+				"admissions.sat_scores.75th_percentile.math": {
+				  "type": "double"
+				},
+				"admissions.sat_scores.25th_percentile.writing": {
+				  "type": "double"
+				},
+				"admissions.sat_scores.75th_percentile.writing": {
+				  "type": "double"
+				},
+				"admissions.sat_scores.midpoint.critical_reading": {
+				  "type": "double"
+				},
+				"admissions.sat_scores.midpoint.math": {
+				  "type": "double"
+				},
+				"admissions.sat_scores.midpoint.writing": {
+				  "type": "double"
+				},
+				"admissions.act_scores.25th_percentile.cumulative": {
+				  "type": "double"
+				},
+				"admissions.act_scores.75th_percentile.cumulative": {
+				  "type": "double"
+				},
+				"admissions.act_scores.25th_percentile.english": {
+				  "type": "double"
+				},
+				"admissions.act_scores.75th_percentile.english": {
+				  "type": "double"
+				},
+				"admissions.act_scores.25th_percentile.math": {
+				  "type": "double"
+				},
+				"admissions.act_scores.75th_percentile.math": {
+				  "type": "double"
+				},
+				"admissions.act_scores.25th_percentile.writing": {
+				  "type": "double"
+				},
+				"admissions.act_scores.75th_percentile.writing": {
+				  "type": "double"
+				},
+				"admissions.act_scores.midpoint.cumulative": {
+				  "type": "double"
+				},
+				"admissions.act_scores.midpoint.english": {
+				  "type": "double"
+				},
+				"admissions.act_scores.midpoint.math": {
+				  "type": "double"
+				},
+				"admissions.act_scores.midpoint.writing": {
+				  "type": "double"
+				},
+				"admissions.sat_scores.average.overall": {
+				  "type": "double"
+				},
+				"admissions.sat_scores.average.by_ope_id": {
+				  "type": "double"
+				},
+				"academics.program_percentage.agriculture": {
+				  "type": "double"
+				},
+				"academics.program_percentage.resources": {
+				  "type": "double"
+				},
+				"academics.program_percentage.architecture": {
+				  "type": "double"
+				},
+				"academics.program_percentage.ethnic_cultural_gender": {
+				  "type": "double"
+				},
+				"academics.program_percentage.communication": {
+				  "type": "double"
+				},
+				"academics.program_percentage.communications_technology": {
+				  "type": "double"
+				},
+				"academics.program_percentage.computer": {
+				  "type": "double"
+				},
+				"academics.program_percentage.personal_culinary": {
+				  "type": "double"
+				},
+				"academics.program_percentage.education": {
+				  "type": "double"
+				},
+				"academics.program_percentage.engineering": {
+				  "type": "double"
+				},
+				"academics.program_percentage.engineering_technology": {
+				  "type": "double"
+				},
+				"academics.program_percentage.language": {
+				  "type": "double"
+				},
+				"academics.program_percentage.family_consumer_science": {
+				  "type": "double"
+				},
+				"academics.program_percentage.legal": {
+				  "type": "double"
+				},
+				"academics.program_percentage.english": {
+				  "type": "double"
+				},
+				"academics.program_percentage.humanities": {
+				  "type": "double"
+				},
+				"academics.program_percentage.library": {
+				  "type": "double"
+				},
+				"academics.program_percentage.biological": {
+				  "type": "double"
+				},
+				"academics.program_percentage.mathematics": {
+				  "type": "double"
+				},
+				"academics.program_percentage.military": {
+				  "type": "double"
+				},
+				"academics.program_percentage.multidiscipline": {
+				  "type": "double"
+				},
+				"academics.program_percentage.parks_recreation_fitness": {
+				  "type": "double"
+				},
+				"academics.program_percentage.philosophy_religious": {
+				  "type": "double"
+				},
+				"academics.program_percentage.theology_religious_vocation": {
+				  "type": "double"
+				},
+				"academics.program_percentage.physical_science": {
+				  "type": "double"
+				},
+				"academics.program_percentage.science_technology": {
+				  "type": "double"
+				},
+				"academics.program_percentage.psychology": {
+				  "type": "double"
+				},
+				"academics.program_percentage.security_law_enforcement": {
+				  "type": "double"
+				},
+				"academics.program_percentage.public_administration_social_service": {
+				  "type": "double"
+				},
+				"academics.program_percentage.social_science": {
+				  "type": "double"
+				},
+				"academics.program_percentage.construction": {
+				  "type": "double"
+				},
+				"academics.program_percentage.mechanic_repair_technology": {
+				  "type": "double"
+				},
+				"academics.program_percentage.precision_production": {
+				  "type": "double"
+				},
+				"academics.program_percentage.transportation": {
+				  "type": "double"
+				},
+				"academics.program_percentage.visual_performing": {
+				  "type": "double"
+				},
+				"academics.program_percentage.health": {
+				  "type": "double"
+				},
+				"academics.program_percentage.business_marketing": {
+				  "type": "double"
+				},
+				"academics.program_percentage.history": {
+				  "type": "double"
+				},
+				"academics.program.certificate_lt_1_yr.agriculture": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.agriculture": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.agriculture": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.agriculture": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.agriculture": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.resources": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.resources": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.resources": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.resources": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.resources": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.architecture": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.architecture": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.architecture": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.architecture": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.architecture": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.ethnic_cultural_gender": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.ethnic_cultural_gender": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.ethnic_cultural_gender": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.ethnic_cultural_gender": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.ethnic_cultural_gender": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.communication": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.communication": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.communication": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.communication": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.communication": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.communications_technology": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.communications_technology": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.communications_technology": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.communications_technology": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.communications_technology": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.computer": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.computer": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.computer": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.computer": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.computer": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.personal_culinary": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.personal_culinary": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.personal_culinary": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.personal_culinary": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.personal_culinary": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.education": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.education": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.education": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.education": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.education": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.engineering": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.engineering": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.engineering": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.engineering": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.engineering": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.engineering_technology": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.engineering_technology": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.engineering_technology": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.engineering_technology": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.engineering_technology": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.language": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.language": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.language": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.language": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.language": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.family_consumer_science": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.family_consumer_science": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.family_consumer_science": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.family_consumer_science": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.family_consumer_science": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.legal": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.legal": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.legal": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.legal": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.legal": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.english": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.english": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.english": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.english": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.english": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.humanities": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.humanities": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.humanities": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.humanities": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.humanities": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.library": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.library": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.library": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.library": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.library": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.biological": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.biological": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.biological": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.biological": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.biological": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.mathematics": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.mathematics": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.mathematics": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.mathematics": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.mathematics": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.military": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.military": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.military": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.military": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.military": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.multidiscipline": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.multidiscipline": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.multidiscipline": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.multidiscipline": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.multidiscipline": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.parks_recreation_fitness": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.parks_recreation_fitness": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.parks_recreation_fitness": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.parks_recreation_fitness": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.parks_recreation_fitness": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.philosophy_religious": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.philosophy_religious": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.philosophy_religious": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.philosophy_religious": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.philosophy_religious": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.theology_religious_vocation": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.theology_religious_vocation": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.theology_religious_vocation": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.theology_religious_vocation": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.theology_religious_vocation": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.physical_science": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.physical_science": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.physical_science": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.physical_science": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.physical_science": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.science_technology": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.science_technology": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.science_technology": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.science_technology": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.science_technology": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.psychology": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.psychology": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.psychology": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.psychology": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.psychology": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.security_law_enforcement": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.security_law_enforcement": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.security_law_enforcement": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.security_law_enforcement": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.security_law_enforcement": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.public_administration_social_service": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.public_administration_social_service": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.public_administration_social_service": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.public_administration_social_service": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.public_administration_social_service": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.social_science": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.social_science": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.social_science": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.social_science": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.social_science": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.construction": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.construction": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.construction": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.construction": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.construction": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.mechanic_repair_technology": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.mechanic_repair_technology": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.mechanic_repair_technology": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.mechanic_repair_technology": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.mechanic_repair_technology": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.precision_production": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.precision_production": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.precision_production": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.precision_production": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.precision_production": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.transportation": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.transportation": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.transportation": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.transportation": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.transportation": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.visual_performing": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.visual_performing": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.visual_performing": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.visual_performing": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.visual_performing": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.health": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.health": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.health": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.health": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.health": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.business_marketing": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.business_marketing": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.business_marketing": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.business_marketing": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.business_marketing": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_1_yr.history": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_2_yr.history": {
+				  "type": "integer"
+				},
+				"academics.program.assoc.history": {
+				  "type": "integer"
+				},
+				"academics.program.certificate_lt_4_yr.history": {
+				  "type": "integer"
+				},
+				"academics.program.bachelors.history": {
+				  "type": "integer"
+				},
+				"school.online_only": {
+				  "type": "integer"
+				},
+				"student.size": {
+				  "type": "integer"
+				},
+				"student.enrollment.all": {
+				  "type": "integer"
+				},
+				"student.demographics.race_ethnicity.white": {
+				  "type": "double"
+				},
+				"student.demographics.race_ethnicity.black": {
+				  "type": "double"
+				},
+				"student.demographics.race_ethnicity.hispanic": {
+				  "type": "double"
+				},
+				"student.demographics.race_ethnicity.asian": {
+				  "type": "double"
+				},
+				"student.demographics.race_ethnicity.aian": {
+				  "type": "double"
+				},
+				"student.demographics.race_ethnicity.nhpi": {
+				  "type": "double"
+				},
+				"student.demographics.race_ethnicity.two_or_more": {
+				  "type": "double"
+				},
+				"student.demographics.race_ethnicity.non_resident_alien": {
+				  "type": "double"
+				},
+				"student.demographics.race_ethnicity.unknown": {
+				  "type": "double"
+				},
+				"student.demographics.race_ethnicity.white_non_hispanic": {
+				  "type": "double"
+				},
+				"student.demographics.race_ethnicity.black_non_hispanic": {
+				  "type": "double"
+				},
+				"student.demographics.race_ethnicity.asian_pacific_islander": {
+				  "type": "double"
+				},
+				"student.demographics.race_ethnicity.aian_prior_2009": {
+				  "type": "double"
+				},
+				"student.demographics.race_ethnicity.hispanic_prior_2009": {
+				  "type": "double"
+				},
+				"student.demographics.non_resident_aliens_2000": {
+				  "type": "double"
+				},
+				"student.demographics.race_ethnicity.unknown_2000": {
+				  "type": "double"
+				},
+				"student.demographics.race_ethnicity.white_2000": {
+				  "type": "double"
+				},
+				"student.demographics.race_ethnicity.black_2000": {
+				  "type": "double"
+				},
+				"student.demographics.race_ethnicity.api_2000": {
+				  "type": "double"
+				},
+				"student.demographics.race_ethnicity.aian_2000": {
+				  "type": "double"
+				},
+				"student.demographics.race_ethnicity.hispanic_2000": {
+				  "type": "double"
+				},
+				"student.part_time_share": {
+				  "type": "double"
+				},
+				"student.part_time_share_2000": {
+				  "type": "double"
+				},
+				"school.operating": {
+				  "type": "integer"
+				},
+				"cost.avg_net_price.public": {
+				  "type": "integer"
+				},
+				"cost.avg_net_price.private": {
+				  "type": "integer"
+				},
+				"cost.avg_net_price.program_year": {
+				  "type": "integer"
+				},
+				"cost.avg_net_price.other_academic_year": {
+				  "type": "integer"
+				},
+				"cost.net_price.public.by_income_level.0-30000": {
+				  "type": "integer"
+				},
+				"cost.net_price.public.by_income_level.30001-48000": {
+				  "type": "integer"
+				},
+				"cost.net_price.public.by_income_level.48001-75000": {
+				  "type": "integer"
+				},
+				"cost.net_price.public.by_income_level.75001-110000": {
+				  "type": "integer"
+				},
+				"cost.net_price.public.by_income_level.110001-plus": {
+				  "type": "integer"
+				},
+				"cost.net_price.private.by_income_level.0-30000": {
+				  "type": "integer"
+				},
+				"cost.net_price.private.by_income_level.30001-48000": {
+				  "type": "integer"
+				},
+				"cost.net_price.private.by_income_level.48001-75000": {
+				  "type": "integer"
+				},
+				"cost.net_price.private.by_income_level.75001-110000": {
+				  "type": "integer"
+				},
+				"cost.net_price.private.by_income_level.110001-plus": {
+				  "type": "integer"
+				},
+				"cost.net_price.program_reporter.by_income_level.0-30000": {
+				  "type": "integer"
+				},
+				"cost.net_price.program_reporter.by_income_level.30001-48000": {
+				  "type": "integer"
+				},
+				"cost.net_price.program_reporter.by_income_level.48001-75000": {
+				  "type": "integer"
+				},
+				"cost.net_price.program_reporter.by_income_level.75001-110000": {
+				  "type": "integer"
+				},
+				"cost.net_price.program_reporter.by_income_level.110001-plus": {
+				  "type": "integer"
+				},
+				"cost.net_price.other_acad_calendar.by_income_level.0-30000": {
+				  "type": "integer"
+				},
+				"cost.net_price.other_acad_calendar.by_income_level.30001-48000": {
+				  "type": "integer"
+				},
+				"cost.net_price.other_acad_calendar.by_income_level.48001-75000": {
+				  "type": "integer"
+				},
+				"cost.net_price.other_acad_calendar.by_income_level.75001-110000": {
+				  "type": "integer"
+				},
+				"cost.net_price.other_acad_calendar.by_income_level.110001-plus": {
+				  "type": "integer"
+				},
+				"cost.net_price.public.by_income_level.0-48000": {
+				  "type": "integer"
+				},
+				"cost.net_price.private.by_income_level.0-48000": {
+				  "type": "integer"
+				},
+				"cost.net_price.program_reporter.by_income_level.0-48000": {
+				  "type": "integer"
+				},
+				"cost.net_price.other_acad_calendar.by_income_level.0-48000": {
+				  "type": "integer"
+				},
+				"cost.net_price.public.by_income_level.30001-75000": {
+				  "type": "integer"
+				},
+				"cost.net_price.private.by_income_level.30001-75000": {
+				  "type": "integer"
+				},
+				"cost.net_price.public.by_income_level.75000-plus": {
+				  "type": "integer"
+				},
+				"cost.net_price.private.by_income_level.75000-plus": {
+				  "type": "integer"
+				},
+				"cost.net_price.program_reporter.by_income_level.30001-75000": {
+				  "type": "integer"
+				},
+				"cost.net_price.other_acad_calendar.by_income_level.30001-75000": {
+				  "type": "integer"
+				},
+				"cost.net_price.program_reporter.by_income_level.75000-plus": {
+				  "type": "integer"
+				},
+				"cost.net_price.other_acad_calendar.by_income_level.75000-plus": {
+				  "type": "integer"
+				},
+				"cost.title_iv.public.all": {
+				  "type": "integer"
+				},
+				"cost.title_iv.private.all": {
+				  "type": "integer"
+				},
+				"cost.title_iv.program_year": {
+				  "type": "integer"
+				},
+				"cost.title_iv.academic_year": {
+				  "type": "integer"
+				},
+				"cost.title_iv.public.by_income_level.0-30000": {
+				  "type": "integer"
+				},
+				"cost.title_iv.public.by_income_level.30001-48000": {
+				  "type": "integer"
+				},
+				"cost.title_iv.public.by_income_level.48001-75000": {
+				  "type": "integer"
+				},
+				"cost.title_iv.public.by_income_level.75001-110000": {
+				  "type": "integer"
+				},
+				"cost.title_iv.public.by_income_level.110001-plus": {
+				  "type": "integer"
+				},
+				"cost.title_iv.private.by_income_level.0-30000": {
+				  "type": "integer"
+				},
+				"cost.title_iv.private.by_income_level.30001-48000": {
+				  "type": "integer"
+				},
+				"cost.title_iv.private.by_income_level.48001-75000": {
+				  "type": "integer"
+				},
+				"cost.title_iv.private.by_income_level.75001-110000": {
+				  "type": "integer"
+				},
+				"cost.title_iv.private.by_income_level.110001-plus": {
+				  "type": "integer"
+				},
+				"cost.title_iv.program_reporter.by_income_level.0-30000": {
+				  "type": "integer"
+				},
+				"cost.title_iv.program_reporter.by_income_level.30001-48000": {
+				  "type": "integer"
+				},
+				"cost.title_iv.program_reporter.by_income_level.48001-75000": {
+				  "type": "integer"
+				},
+				"cost.title_iv.program_reporter.by_income_level.75001-110000": {
+				  "type": "integer"
+				},
+				"cost.title_iv.program_reporter.by_income_level.110001-plus": {
+				  "type": "integer"
+				},
+				"cost.title_iv.other_acad_calendar.by_income_level.0-30000": {
+				  "type": "integer"
+				},
+				"cost.title_iv.other_acad_calendar.by_income_level.30001-48000": {
+				  "type": "integer"
+				},
+				"cost.title_iv.other_acad_calendar.by_income_level.48001-75000": {
+				  "type": "integer"
+				},
+				"cost.title_iv.other_acad_calendar.by_income_level.75001-110000": {
+				  "type": "integer"
+				},
+				"cost.title_iv.other_acad_calendar.by_income_level.110001-plus": {
+				  "type": "integer"
+				},
+				"cost.attendance.academic_year": {
+				  "type": "integer"
+				},
+				"cost.attendance.program_year": {
+				  "type": "integer"
+				},
+				"cost.tuition.in_state": {
+				  "type": "integer"
+				},
+				"cost.tuition.out_of_state": {
+				  "type": "integer"
+				},
+				"cost.tuition.program_year": {
+				  "type": "integer"
+				},
+				"school.tuition_revenue_per_fte": {
+				  "type": "integer"
+				},
+				"school.instructional_expenditure_per_fte": {
+				  "type": "integer"
+				},
+				"school.faculty_salary": {
+				  "type": "integer"
+				},
+				"school.ft_faculty_rate": {
+				  "type": "double"
+				},
+				"aid.pell_grant_rate": {
+				  "type": "double"
+				},
+				"completion.completion_rate_4yr_150nt": {
+				  "type": "double"
+				},
+				"completion.completion_rate_less_than_4yr_150nt": {
+				  "type": "double"
+				},
+				"completion.completion_rate_4yr_150nt_pooled": {
+				  "type": "double"
+				},
+				"completion.completion_rate_less_than_4yr_150nt_pooled": {
+				  "type": "double"
+				},
+				"completion.pooled_yrs_used": {
+				  "type": "integer"
+				},
+				"student.share_first.time_full.time": {
+				  "type": "double"
+				},
+				"completion.completion_cohort_4yr_150nt": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_less_than_4yr_150nt": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_4yr_150nt_pooled": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_less_than_4yr_150nt_pooled": {
+				  "type": "integer"
+				},
+				"completion.completion_rate_4yr_150_white": {
+				  "type": "double"
+				},
+				"completion.completion_rate_4yr_150_black": {
+				  "type": "double"
+				},
+				"completion.completion_rate_4yr_150_hispanic": {
+				  "type": "double"
+				},
+				"completion.completion_rate_4yr_150_asian": {
+				  "type": "double"
+				},
+				"completion.completion_rate_4yr_150_aian": {
+				  "type": "double"
+				},
+				"completion.completion_rate_4yr_150_nhpi": {
+				  "type": "double"
+				},
+				"completion.completion_rate_4yr_150_2ormore": {
+				  "type": "double"
+				},
+				"completion.completion_rate_4yr_150_nonresident.alien": {
+				  "type": "double"
+				},
+				"completion.completion_rate_4yr_150_race.unknown": {
+				  "type": "double"
+				},
+				"completion.completion_rate_4yr_150_white_pre2010": {
+				  "type": "double"
+				},
+				"completion.completion_rate_4yr_150_black_pre2010": {
+				  "type": "double"
+				},
+				"completion.completion_rate_4yr_150_api_pre2010": {
+				  "type": "double"
+				},
+				"completion.completion_rate_4yr_150_aian_pre2010": {
+				  "type": "double"
+				},
+				"completion.completion_rate_4yr_150_hispanic_pre2010": {
+				  "type": "double"
+				},
+				"completion.completion_rate_l4yr_150_white": {
+				  "type": "double"
+				},
+				"completion.completion_rate_l4yr_150_black": {
+				  "type": "double"
+				},
+				"completion.completion_rate_l4yr_150_hispanic": {
+				  "type": "double"
+				},
+				"completion.completion_rate_l4yr_150_asian": {
+				  "type": "double"
+				},
+				"completion.completion_rate_l4yr_150_aian": {
+				  "type": "double"
+				},
+				"completion.completion_rate_l4yr_150_nhpi": {
+				  "type": "double"
+				},
+				"completion.completion_rate_l4yr_150_2ormore": {
+				  "type": "double"
+				},
+				"completion.completion_rate_l4yr_150_nonresident.alien": {
+				  "type": "double"
+				},
+				"completion.completion_rate_l4yr_150_race.unknown": {
+				  "type": "double"
+				},
+				"completion.completion_rate_l4yr_150_white_pre2010": {
+				  "type": "double"
+				},
+				"completion.completion_rate_l4yr_150_black_pre2010": {
+				  "type": "double"
+				},
+				"completion.completion_rate_l4yr_150_api_pre2010": {
+				  "type": "double"
+				},
+				"completion.completion_rate_l4yr_150_aian_pre2010": {
+				  "type": "double"
+				},
+				"completion.completion_rate_l4yr_150_hispanic_pre2010": {
+				  "type": "double"
+				},
+				"completion.completion_rate_4yr_200nt": {
+				  "type": "double"
+				},
+				"completion.completion_rate_less_than_4yr_200nt": {
+				  "type": "double"
+				},
+				"completion.completion_cohort_4yr_200nt": {
+				  "type": "double"
+				},
+				"completion.completion_cohort_less_than_4yr_200nt": {
+				  "type": "double"
+				},
+				"student.retention_rate.four_year.full_time": {
+				  "type": "double"
+				},
+				"student.retention_rate.lt_four_year.full_time": {
+				  "type": "double"
+				},
+				"student.retention_rate.four_year.part_time": {
+				  "type": "double"
+				},
+				"student.retention_rate.lt_four_year.part_time": {
+				  "type": "double"
+				},
+				"completion.completion_rate_4yr_200nt_pooled": {
+				  "type": "double"
+				},
+				"completion.completion_rate_less_than_4yr_200nt_pooled": {
+				  "type": "double"
+				},
+				"completion.pooled_yrs_used_200": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_4yr_200nt_pooled": {
+				  "type": "double"
+				},
+				"completion.completion_cohort_less_than_4yr_200nt_pooled": {
+				  "type": "double"
+				},
+				"aid.federal_loan_rate": {
+				  "type": "double"
+				},
+				"student.share_25_older": {
+				  "type": "double"
+				},
+				"repayment.2_yr_default_rate": {
+				  "type": "double"
+				},
+				"repayment.3_yr_default_rate": {
+				  "type": "double"
+				},
+				"completion.title_iv.died_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.completed_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_completed_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_completed_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.withdrawn_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_withdrawn_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_withdrawn_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.still_enrolled_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_still_enrolled_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_still_enrolled_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.unknown_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_unknown_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_unknown_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.died_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.completed_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_completed_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_completed_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.withdrawn_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_withdrawn_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_withdrawn_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.still_enrolled_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_still_enrolled_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_still_enrolled_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.unknown_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_unknown_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_unknown_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.died_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.completed_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_completed_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_completed_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.withdrawn_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_withdrawn_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_withdrawn_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.still_enrolled_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_still_enrolled_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_still_enrolled_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.unknown_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_unknown_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_unknown_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.died_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.completed_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_completed_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_completed_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.withdrawn_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_withdrawn_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_withdrawn_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.still_enrolled_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_still_enrolled_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_still_enrolled_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.unknown_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_unknown_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_unknown_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.died_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.completed_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_completed_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_completed_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.withdrawn_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_withdrawn_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_withdrawn_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.still_enrolled_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_still_enrolled_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_still_enrolled_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.unknown_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_unknown_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_unknown_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.died_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.completed_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_completed_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_completed_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.withdrawn_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_withdrawn_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_withdrawn_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.still_enrolled_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_still_enrolled_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_still_enrolled_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.unknown_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_unknown_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_unknown_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.died_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.completed_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_completed_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_completed_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.withdrawn_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_withdrawn_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_withdrawn_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.still_enrolled_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_still_enrolled_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_still_enrolled_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.unknown_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_unknown_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_unknown_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.died_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.completed_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_completed_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_completed_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.withdrawn_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_withdrawn_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_withdrawn_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.still_enrolled_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_still_enrolled_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_still_enrolled_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.unknown_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_unknown_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_unknown_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.died_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.completed_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_completed_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_completed_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.withdrawn_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_withdrawn_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_withdrawn_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.still_enrolled_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_still_enrolled_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_still_enrolled_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.unknown_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_unknown_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_unknown_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.died_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.completed_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_completed_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_completed_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.withdrawn_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_withdrawn_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_withdrawn_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.still_enrolled_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_still_enrolled_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_still_enrolled_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.unknown_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_unknown_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_unknown_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.died_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.completed_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_completed_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_completed_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.withdrawn_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_withdrawn_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_withdrawn_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.still_enrolled_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_still_enrolled_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_still_enrolled_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.unknown_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_unknown_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_unknown_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.died_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.completed_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_completed_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_completed_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.withdrawn_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_withdrawn_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_withdrawn_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.still_enrolled_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_still_enrolled_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_still_enrolled_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.unknown_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_unknown_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_unknown_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.died_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.completed_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_completed_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_completed_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.withdrawn_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_withdrawn_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_withdrawn_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.still_enrolled_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_still_enrolled_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_still_enrolled_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.unknown_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_unknown_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_unknown_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.died_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.completed_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_completed_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_completed_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.withdrawn_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_withdrawn_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_withdrawn_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.still_enrolled_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_still_enrolled_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_still_enrolled_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.unknown_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_unknown_4yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_unknown_2yr_by.2yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.died_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.completed_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_completed_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_completed_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.withdrawn_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_withdrawn_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_withdrawn_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.still_enrolled_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_still_enrolled_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_still_enrolled_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.unknown_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_unknown_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_unknown_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.died_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.completed_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_completed_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_completed_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.withdrawn_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_withdrawn_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_withdrawn_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.still_enrolled_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_still_enrolled_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_still_enrolled_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.unknown_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_unknown_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_unknown_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.died_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.completed_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_completed_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_completed_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.withdrawn_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_withdrawn_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_withdrawn_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.still_enrolled_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_still_enrolled_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_still_enrolled_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.unknown_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_unknown_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_unknown_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.died_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.completed_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_completed_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_completed_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.withdrawn_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_withdrawn_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_withdrawn_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.still_enrolled_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_still_enrolled_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_still_enrolled_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.unknown_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_unknown_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_unknown_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.died_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.completed_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_completed_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_completed_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.withdrawn_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_withdrawn_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_withdrawn_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.still_enrolled_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_still_enrolled_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_still_enrolled_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.unknown_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_unknown_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_unknown_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.died_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.completed_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_completed_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_completed_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.withdrawn_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_withdrawn_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_withdrawn_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.still_enrolled_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_still_enrolled_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_still_enrolled_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.unknown_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_unknown_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_unknown_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.died_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.completed_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_completed_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_completed_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.withdrawn_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_withdrawn_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_withdrawn_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.still_enrolled_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_still_enrolled_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_still_enrolled_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.unknown_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_unknown_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_unknown_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.died_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.completed_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_completed_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_completed_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.withdrawn_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_withdrawn_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_withdrawn_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.still_enrolled_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_still_enrolled_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_still_enrolled_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.unknown_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_unknown_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_unknown_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.died_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.completed_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_completed_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_completed_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.withdrawn_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_withdrawn_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_withdrawn_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.still_enrolled_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_still_enrolled_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_still_enrolled_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.unknown_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_unknown_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_unknown_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.died_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.completed_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_completed_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_completed_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.withdrawn_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_withdrawn_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_withdrawn_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.still_enrolled_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_still_enrolled_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_still_enrolled_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.unknown_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_unknown_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_unknown_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.died_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.completed_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_completed_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_completed_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.withdrawn_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_withdrawn_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_withdrawn_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.still_enrolled_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_still_enrolled_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_still_enrolled_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.unknown_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_unknown_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_unknown_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.died_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.completed_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_completed_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_completed_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.withdrawn_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_withdrawn_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_withdrawn_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.still_enrolled_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_still_enrolled_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_still_enrolled_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.unknown_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_unknown_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_unknown_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.died_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.completed_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_completed_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_completed_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.withdrawn_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_withdrawn_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_withdrawn_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.still_enrolled_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_still_enrolled_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_still_enrolled_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.unknown_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_unknown_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_unknown_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.died_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.completed_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_completed_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_completed_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.withdrawn_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_withdrawn_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_withdrawn_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.still_enrolled_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_still_enrolled_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_still_enrolled_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.unknown_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_unknown_4yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_unknown_2yr_by.3yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.died_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.completed_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_completed_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_completed_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.withdrawn_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_withdrawn_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_withdrawn_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.still_enrolled_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_still_enrolled_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_still_enrolled_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.unknown_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_unknown_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_unknown_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.died_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.completed_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_completed_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_completed_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.withdrawn_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_withdrawn_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_withdrawn_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.still_enrolled_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_still_enrolled_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_still_enrolled_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.unknown_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_unknown_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_unknown_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.died_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.completed_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_completed_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_completed_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.withdrawn_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_withdrawn_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_withdrawn_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.still_enrolled_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_still_enrolled_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_still_enrolled_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.unknown_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_unknown_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_unknown_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.died_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.completed_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_completed_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_completed_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.withdrawn_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_withdrawn_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_withdrawn_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.still_enrolled_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_still_enrolled_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_still_enrolled_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.unknown_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_unknown_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_unknown_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.died_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.completed_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_completed_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_completed_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.withdrawn_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_withdrawn_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_withdrawn_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.still_enrolled_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_still_enrolled_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_still_enrolled_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.unknown_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_unknown_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_unknown_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.died_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.completed_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_completed_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_completed_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.withdrawn_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_withdrawn_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_withdrawn_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.still_enrolled_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_still_enrolled_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_still_enrolled_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.unknown_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_unknown_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_unknown_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.died_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.completed_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_completed_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_completed_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.withdrawn_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_withdrawn_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_withdrawn_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.still_enrolled_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_still_enrolled_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_still_enrolled_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.unknown_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_unknown_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_unknown_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.died_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.completed_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_completed_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_completed_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.withdrawn_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_withdrawn_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_withdrawn_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.still_enrolled_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_still_enrolled_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_still_enrolled_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.unknown_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_unknown_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_unknown_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.died_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.completed_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_completed_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_completed_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.withdrawn_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_withdrawn_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_withdrawn_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.still_enrolled_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_still_enrolled_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_still_enrolled_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.unknown_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_unknown_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_unknown_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.died_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.completed_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_completed_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_completed_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.withdrawn_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_withdrawn_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_withdrawn_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.still_enrolled_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_still_enrolled_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_still_enrolled_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.unknown_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_unknown_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_unknown_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.died_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.completed_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_completed_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_completed_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.withdrawn_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_withdrawn_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_withdrawn_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.still_enrolled_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_still_enrolled_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_still_enrolled_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.unknown_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_unknown_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_unknown_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.died_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.completed_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_completed_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_completed_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.withdrawn_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_withdrawn_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_withdrawn_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.still_enrolled_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_still_enrolled_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_still_enrolled_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.unknown_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_unknown_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_unknown_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.died_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.completed_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_completed_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_completed_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.withdrawn_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_withdrawn_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_withdrawn_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.still_enrolled_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_still_enrolled_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_still_enrolled_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.unknown_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_unknown_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_unknown_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.died_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.completed_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_completed_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_completed_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.withdrawn_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_withdrawn_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_withdrawn_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.still_enrolled_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_still_enrolled_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_still_enrolled_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.unknown_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_unknown_4yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_unknown_2yr_by.4yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.died_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.completed_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_completed_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_completed_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.withdrawn_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_withdrawn_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_withdrawn_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.still_enrolled_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_still_enrolled_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_still_enrolled_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.unknown_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_unknown_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_unknown_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.died_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.completed_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_completed_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_completed_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.withdrawn_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_withdrawn_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_withdrawn_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.still_enrolled_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_still_enrolled_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_still_enrolled_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.unknown_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_unknown_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_unknown_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.died_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.completed_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_completed_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_completed_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.withdrawn_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_withdrawn_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_withdrawn_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.still_enrolled_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_still_enrolled_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_still_enrolled_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.unknown_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_unknown_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_unknown_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.died_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.completed_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_completed_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_completed_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.withdrawn_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_withdrawn_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_withdrawn_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.still_enrolled_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_still_enrolled_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_still_enrolled_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.unknown_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_unknown_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_unknown_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.died_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.completed_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_completed_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_completed_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.withdrawn_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_withdrawn_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_withdrawn_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.still_enrolled_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_still_enrolled_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_still_enrolled_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.unknown_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_unknown_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_unknown_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.died_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.completed_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_completed_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_completed_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.withdrawn_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_withdrawn_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_withdrawn_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.still_enrolled_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_still_enrolled_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_still_enrolled_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.unknown_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_unknown_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_unknown_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.died_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.completed_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_completed_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_completed_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.withdrawn_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_withdrawn_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_withdrawn_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.still_enrolled_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_still_enrolled_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_still_enrolled_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.unknown_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_unknown_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_unknown_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.died_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.completed_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_completed_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_completed_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.withdrawn_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_withdrawn_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_withdrawn_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.still_enrolled_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_still_enrolled_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_still_enrolled_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.unknown_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_unknown_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_unknown_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.died_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.completed_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_completed_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_completed_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.withdrawn_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_withdrawn_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_withdrawn_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.still_enrolled_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_still_enrolled_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_still_enrolled_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.unknown_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_unknown_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_unknown_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.died_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.completed_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_completed_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_completed_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.withdrawn_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_withdrawn_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_withdrawn_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.still_enrolled_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_still_enrolled_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_still_enrolled_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.unknown_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_unknown_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_unknown_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.died_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.completed_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_completed_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_completed_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.withdrawn_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_withdrawn_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_withdrawn_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.still_enrolled_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_still_enrolled_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_still_enrolled_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.unknown_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_unknown_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_unknown_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.died_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.completed_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_completed_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_completed_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.withdrawn_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_withdrawn_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_withdrawn_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.still_enrolled_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_still_enrolled_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_still_enrolled_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.unknown_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_unknown_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_unknown_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.died_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.completed_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_completed_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_completed_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.withdrawn_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_withdrawn_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_withdrawn_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.still_enrolled_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_still_enrolled_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_still_enrolled_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.unknown_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_unknown_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_unknown_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.died_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.completed_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_completed_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_completed_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.withdrawn_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_withdrawn_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_withdrawn_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.still_enrolled_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_still_enrolled_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_still_enrolled_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.unknown_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_unknown_4yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_unknown_2yr_by.6yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.died_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.completed_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_completed_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_completed_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.withdrawn_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_withdrawn_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_withdrawn_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.still_enrolled_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_still_enrolled_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_still_enrolled_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.unknown_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_unknown_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.transf_unknown_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.died_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.completed_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_completed_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_completed_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.withdrawn_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_withdrawn_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_withdrawn_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.still_enrolled_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_still_enrolled_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_still_enrolled_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.unknown_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_unknown_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.low_inc.transf_unknown_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.died_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.completed_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_completed_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_completed_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.withdrawn_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_withdrawn_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_withdrawn_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.still_enrolled_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_still_enrolled_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_still_enrolled_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.unknown_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_unknown_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.mid_inc.transf_unknown_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.died_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.completed_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_completed_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_completed_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.withdrawn_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_withdrawn_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_withdrawn_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.still_enrolled_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_still_enrolled_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_still_enrolled_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.unknown_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_unknown_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.high_inc.transf_unknown_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.died_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.completed_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_completed_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_completed_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.withdrawn_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_withdrawn_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_withdrawn_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.still_enrolled_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_still_enrolled_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_still_enrolled_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.unknown_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_unknown_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.depend.transf_unknown_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.died_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.completed_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_completed_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_completed_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.withdrawn_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_withdrawn_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_withdrawn_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.still_enrolled_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_still_enrolled_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_still_enrolled_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.unknown_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_unknown_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.independ.transf_unknown_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.died_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.completed_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_completed_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_completed_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.withdrawn_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_withdrawn_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_withdrawn_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.still_enrolled_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_still_enrolled_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_still_enrolled_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.unknown_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_unknown_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.female.transf_unknown_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.died_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.completed_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_completed_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_completed_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.withdrawn_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_withdrawn_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_withdrawn_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.still_enrolled_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_still_enrolled_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_still_enrolled_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.unknown_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_unknown_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.male.transf_unknown_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.died_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.completed_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_completed_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_completed_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.withdrawn_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_withdrawn_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_withdrawn_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.still_enrolled_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_still_enrolled_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_still_enrolled_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.unknown_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_unknown_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.pell_recip.transf_unknown_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.died_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.completed_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_completed_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_completed_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.withdrawn_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_withdrawn_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_withdrawn_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.still_enrolled_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_still_enrolled_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_still_enrolled_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.unknown_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_unknown_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_pell.transf_unknown_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.died_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.completed_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_completed_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_completed_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.withdrawn_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_withdrawn_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_withdrawn_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.still_enrolled_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_still_enrolled_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_still_enrolled_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.unknown_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_unknown_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.loan_recip.transf_unknown_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.died_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.completed_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_completed_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_completed_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.withdrawn_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_withdrawn_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_withdrawn_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.still_enrolled_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_still_enrolled_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_still_enrolled_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.unknown_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_unknown_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.no_loan.transf_unknown_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.died_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.completed_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_completed_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_completed_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.withdrawn_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_withdrawn_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_withdrawn_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.still_enrolled_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_still_enrolled_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_still_enrolled_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.unknown_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_unknown_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.first_gen.transf_unknown_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.died_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.completed_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_completed_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_completed_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.withdrawn_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_withdrawn_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_withdrawn_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.still_enrolled_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_still_enrolled_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_still_enrolled_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.unknown_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_unknown_4yr_by.8yrs": {
+				  "type": "double"
+				},
+				"completion.title_iv.not_first_gen.transf_unknown_2yr_by.8yrs": {
+				  "type": "double"
+				},
+				"repayment.repayment_cohort.1_year_declining_balance": {
+				  "type": "double"
+				},
+				"repayment.1_yr_repayment.completers_rate": {
+				  "type": "double"
+				},
+				"repayment.1_yr_repayment.noncompleters_rate": {
+				  "type": "double"
+				},
+				"repayment.1_yr_repayment.income.0_30000": {
+				  "type": "double"
+				},
+				"repayment.1_yr_repayment.income.30000_75000": {
+				  "type": "double"
+				},
+				"repayment.1_yr_repayment.income.greater_than_75000": {
+				  "type": "double"
+				},
+				"repayment.1_yr_repayment.dependent_students_rate": {
+				  "type": "double"
+				},
+				"repayment.1_yr_repayment.independent_students_rate": {
+				  "type": "double"
+				},
+				"repayment.1_yr_repayment.pell_grant_rate": {
+				  "type": "double"
+				},
+				"repayment.1_yr_repayment.no_pell_grant_rate": {
+				  "type": "double"
+				},
+				"repayment.1_yr_repayment.female_students_rate": {
+				  "type": "double"
+				},
+				"repayment.1_yr_repayment.male_students_rate": {
+				  "type": "double"
+				},
+				"repayment.1_yr_repayment.first_generation_students_rate": {
+				  "type": "double"
+				},
+				"repayment.1_yr_repayment.non_first_generation_students_rate": {
+				  "type": "double"
+				},
+				"repayment.repayment_cohort.3_year_declining_balance": {
+				  "type": "double"
+				},
+				"repayment.3_yr_repayment.completers_rate": {
+				  "type": "double"
+				},
+				"repayment.3_yr_repayment.noncompleters_rate": {
+				  "type": "double"
+				},
+				"repayment.3_yr_repayment.income.0_30000": {
+				  "type": "double"
+				},
+				"repayment.3_yr_repayment.income.30000_75000": {
+				  "type": "double"
+				},
+				"repayment.3_yr_repayment.income.greater_than_75000": {
+				  "type": "double"
+				},
+				"repayment.3_yr_repayment.dependent_students_rate": {
+				  "type": "double"
+				},
+				"repayment.3_yr_repayment.independent_students_rate": {
+				  "type": "double"
+				},
+				"repayment.3_yr_repayment.pell_grant_rate": {
+				  "type": "double"
+				},
+				"repayment.3_yr_repayment.no_pell_grant_rate": {
+				  "type": "double"
+				},
+				"repayment.3_yr_repayment.female_students_rate": {
+				  "type": "double"
+				},
+				"repayment.3_yr_repayment.male_students_rate": {
+				  "type": "double"
+				},
+				"repayment.3_yr_repayment.first_generation_students_rate": {
+				  "type": "double"
+				},
+				"repayment.3_yr_repayment.non_first_generation_students_rate": {
+				  "type": "double"
+				},
+				"repayment.repayment_cohort.5_year_declining_balance": {
+				  "type": "double"
+				},
+				"repayment.5_yr_repayment.completers_rate": {
+				  "type": "double"
+				},
+				"repayment.5_yr_repayment.noncompleters_rate": {
+				  "type": "double"
+				},
+				"repayment.5_yr_repayment.income.0_30000": {
+				  "type": "double"
+				},
+				"repayment.5_yr_repayment.income.30000_75000": {
+				  "type": "double"
+				},
+				"repayment.5_yr_repayment.income.greater_than_75000": {
+				  "type": "double"
+				},
+				"repayment.5_yr_repayment.dependent_students_rate": {
+				  "type": "double"
+				},
+				"repayment.5_yr_repayment.independent_students_rate": {
+				  "type": "double"
+				},
+				"repayment.5_yr_repayment.pell_grant_rate": {
+				  "type": "double"
+				},
+				"repayment.5_yr_repayment.no_pell_grant_rate": {
+				  "type": "double"
+				},
+				"repayment.5_yr_repayment.female_students_rate": {
+				  "type": "double"
+				},
+				"repayment.5_yr_repayment.male_students_rate": {
+				  "type": "double"
+				},
+				"repayment.5_yr_repayment.first_generation_students_rate": {
+				  "type": "double"
+				},
+				"repayment.5_yr_repayment.non_first_generation_students_rate": {
+				  "type": "double"
+				},
+				"repayment.repayment_cohort.7_year_declining_balance": {
+				  "type": "double"
+				},
+				"repayment.7_yr_repayment.completers_rate": {
+				  "type": "double"
+				},
+				"repayment.7_yr_repayment.noncompleters_rate": {
+				  "type": "double"
+				},
+				"repayment.7_yr_repayment.income.0_30000": {
+				  "type": "double"
+				},
+				"repayment.7_yr_repayment.income.30000_75000": {
+				  "type": "double"
+				},
+				"repayment.7_yr_repayment.income.greater_than_75000": {
+				  "type": "double"
+				},
+				"repayment.7_yr_repayment.dependent_students_rate": {
+				  "type": "double"
+				},
+				"repayment.7_yr_repayment.independent_students_rate": {
+				  "type": "double"
+				},
+				"repayment.7_yr_repayment.pell_grant_rate": {
+				  "type": "double"
+				},
+				"repayment.7_yr_repayment.no_pell_grant_rate": {
+				  "type": "double"
+				},
+				"repayment.7_yr_repayment.female_students_rate": {
+				  "type": "double"
+				},
+				"repayment.7_yr_repayment.male_students_rate": {
+				  "type": "double"
+				},
+				"repayment.7_yr_repayment.first_generation_students_rate": {
+				  "type": "double"
+				},
+				"repayment.7_yr_repayment.non_first_generation_students_rate": {
+				  "type": "double"
+				},
+				"student.share_lowincome.0_30000": {
+				  "type": "double"
+				},
+				"student.share_independent_students": {
+				  "type": "double"
+				},
+				"student.share_independent_lowincome.0_30000": {
+				  "type": "double"
+				},
+				"student.share_dependent_lowincome.0_300000": {
+				  "type": "double"
+				},
+				"student.share_firstgeneration": {
+				  "type": "double"
+				},
+				"student.share_middleincome.30001_48000": {
+				  "type": "double"
+				},
+				"student.share_middleincome.48001_75000": {
+				  "type": "double"
+				},
+				"student.share_highincome.75001_110000": {
+				  "type": "double"
+				},
+				"student.share_highincome.110001plus": {
+				  "type": "double"
+				},
+				"student.share_dependent_middleincome.300001_48000": {
+				  "type": "double"
+				},
+				"student.share_dependent_middleincome.48001_75000": {
+				  "type": "double"
+				},
+				"student.share_dependent_highincome.75001_110000": {
+				  "type": "double"
+				},
+				"student.share_dependent_highincome.110001plus": {
+				  "type": "double"
+				},
+				"student.share_independent_middleincome.30001_48000": {
+				  "type": "double"
+				},
+				"student.share_independent_middleincome.48001_75000": {
+				  "type": "double"
+				},
+				"student.share_independent_highincome.75001_110000": {
+				  "type": "double"
+				},
+				"student.share_independent_highincome.110001plus": {
+				  "type": "double"
+				},
+				"student.share_firstgeneration_parents.middleschool": {
+				  "type": "double"
+				},
+				"student.share_firstgeneration_parents.highschool": {
+				  "type": "double"
+				},
+				"student.share_firstgeneration_parents.somecollege": {
+				  "type": "double"
+				},
+				"student.fafsa_sent.2_college_allyrs": {
+				  "type": "double"
+				},
+				"student.fafsa_sent.3_college_allyrs": {
+				  "type": "double"
+				},
+				"student.fafsa_sent.4_college_allyrs": {
+				  "type": "double"
+				},
+				"student.fafsa_sent.5plus_college_allyrs": {
+				  "type": "double"
+				},
+				"student.avg_dependent_income.2014dollars": {
+				  "type": "integer"
+				},
+				"student.avg_independent_income.2014dollars": {
+				  "type": "integer"
+				},
+				"completion.2_yr_completion.overall": {
+				  "type": "integer"
+				},
+				"completion.2_yr_completion.low_income": {
+				  "type": "integer"
+				},
+				"completion.2_yr_completion.middle_income": {
+				  "type": "integer"
+				},
+				"completion.2_yr_completion.high_income": {
+				  "type": "integer"
+				},
+				"completion.2_yr_completion.dependent_students": {
+				  "type": "integer"
+				},
+				"completion.2_yr_completion.independent_students": {
+				  "type": "integer"
+				},
+				"completion.2_yr_completion.female_students": {
+				  "type": "integer"
+				},
+				"completion.2_yr_completion.male_students": {
+				  "type": "integer"
+				},
+				"completion.2_yr_completion.pell_grant": {
+				  "type": "integer"
+				},
+				"completion.2_yr_completion.no_pell_grant": {
+				  "type": "integer"
+				},
+				"completion.2_yr_completion.loan_students": {
+				  "type": "integer"
+				},
+				"completion.2_yr_completion.no_loan_students": {
+				  "type": "integer"
+				},
+				"completion.2_yr_completion.first_generation_students": {
+				  "type": "integer"
+				},
+				"completion.2_yr_completion.no_first_generation_students": {
+				  "type": "integer"
+				},
+				"completion.3_yr_completion.overall": {
+				  "type": "integer"
+				},
+				"completion.3_yr_completion.low_income": {
+				  "type": "integer"
+				},
+				"completion.3_yr_completion.middle_income": {
+				  "type": "integer"
+				},
+				"completion.3_yr_completion.high_income": {
+				  "type": "integer"
+				},
+				"completion.3_yr_completion.dependent_students": {
+				  "type": "integer"
+				},
+				"completion.3_yr_completion.independent_students": {
+				  "type": "integer"
+				},
+				"completion.3_yr_completion.female_students": {
+				  "type": "integer"
+				},
+				"completion.3_yr_completion.male_students": {
+				  "type": "integer"
+				},
+				"completion.3_yr_completion.pell_grant": {
+				  "type": "integer"
+				},
+				"completion.3_yr_completion.no_pell_grant": {
+				  "type": "integer"
+				},
+				"completion.3_yr_completion.loan_students": {
+				  "type": "integer"
+				},
+				"completion.3_yr_completion.no_loan_students": {
+				  "type": "integer"
+				},
+				"completion.3_yr_completion.first_generation_students": {
+				  "type": "integer"
+				},
+				"completion.3_yr_completion.no_first_generation_students": {
+				  "type": "integer"
+				},
+				"completion.4_yr_completion.overall": {
+				  "type": "integer"
+				},
+				"completion.4_yr_completion.low_income": {
+				  "type": "integer"
+				},
+				"completion.4_yr_completion.middle_income": {
+				  "type": "integer"
+				},
+				"completion.4_yr_completion.high_income": {
+				  "type": "integer"
+				},
+				"completion.4_yr_completion.dependent_students": {
+				  "type": "integer"
+				},
+				"completion.4_yr_completion.independent_students": {
+				  "type": "integer"
+				},
+				"completion.4_yr_completion.female_students": {
+				  "type": "integer"
+				},
+				"completion.4_yr_completion.male_students": {
+				  "type": "integer"
+				},
+				"completion.4_yr_completion.pell_grant": {
+				  "type": "integer"
+				},
+				"completion.4_yr_completion.no_pell_grant": {
+				  "type": "integer"
+				},
+				"completion.4_yr_completion.loan_students": {
+				  "type": "integer"
+				},
+				"completion.4_yr_completion.no_loan_students": {
+				  "type": "integer"
+				},
+				"completion.4_yr_completion.first_generation_students": {
+				  "type": "integer"
+				},
+				"completion.4_yr_completion.no_first_generation_students": {
+				  "type": "integer"
+				},
+				"completion.6_yr_completion.overall": {
+				  "type": "integer"
+				},
+				"completion.6_yr_completion.low_income": {
+				  "type": "integer"
+				},
+				"completion.6_yr_completion.middle_income": {
+				  "type": "integer"
+				},
+				"completion.6_yr_completion.high_income": {
+				  "type": "integer"
+				},
+				"completion.6_yr_completion.dependent_students": {
+				  "type": "integer"
+				},
+				"completion.6_yr_completion.independent_students": {
+				  "type": "integer"
+				},
+				"completion.6_yr_completion.female_students": {
+				  "type": "integer"
+				},
+				"completion.6_yr_completion.male_students": {
+				  "type": "integer"
+				},
+				"completion.6_yr_completion.pell_grant": {
+				  "type": "integer"
+				},
+				"completion.6_yr_completion.no_pell_grant": {
+				  "type": "integer"
+				},
+				"completion.6_yr_completion.loan_students": {
+				  "type": "integer"
+				},
+				"completion.6_yr_completion.no_loan_students": {
+				  "type": "integer"
+				},
+				"completion.6_yr_completion.first_generation_students": {
+				  "type": "integer"
+				},
+				"completion.6_yr_completion.no_first_generation_students": {
+				  "type": "integer"
+				},
+				"completion.8_yr_completion.overall": {
+				  "type": "integer"
+				},
+				"completion.8_yr_completion.low_income": {
+				  "type": "integer"
+				},
+				"completion.8_yr_completion.middle_income": {
+				  "type": "integer"
+				},
+				"completion.8_yr_completion.high_income": {
+				  "type": "integer"
+				},
+				"completion.8_yr_completion.dependent_students": {
+				  "type": "integer"
+				},
+				"completion.8_yr_completion.independent_students": {
+				  "type": "integer"
+				},
+				"completion.8_yr_completion.female_students": {
+				  "type": "integer"
+				},
+				"completion.8_yr_completion.male_students": {
+				  "type": "integer"
+				},
+				"completion.8_yr_completion.pell_grant": {
+				  "type": "integer"
+				},
+				"completion.8_yr_completion.no_pell_grant": {
+				  "type": "integer"
+				},
+				"completion.8_yr_completion.loan_students": {
+				  "type": "integer"
+				},
+				"completion.8_yr_completion.no_loan_students": {
+				  "type": "integer"
+				},
+				"completion.8_yr_completion.first_generation_students": {
+				  "type": "integer"
+				},
+				"completion.8_yr_completion.no_first_generation_students": {
+				  "type": "integer"
+				},
+				"aid.loan_principal": {
+				  "type": "double"
+				},
+				"aid.median_debt.completers.overall": {
+				  "type": "double"
+				},
+				"aid.median_debt.noncompleters": {
+				  "type": "double"
+				},
+				"aid.median_debt.income.0_30000": {
+				  "type": "double"
+				},
+				"aid.median_debt.income.30001_75000": {
+				  "type": "double"
+				},
+				"aid.median_debt.income.greater_than_75000": {
+				  "type": "double"
+				},
+				"aid.median_debt.dependent_students": {
+				  "type": "double"
+				},
+				"aid.median_debt.independent_students": {
+				  "type": "double"
+				},
+				"aid.median_debt.pell_grant": {
+				  "type": "double"
+				},
+				"aid.median_debt.no_pell_grant": {
+				  "type": "double"
+				},
+				"aid.median_debt.female_students": {
+				  "type": "double"
+				},
+				"aid.median_debt.male_students": {
+				  "type": "double"
+				},
+				"aid.median_debt.first_generation_students": {
+				  "type": "double"
+				},
+				"aid.median_debt.non_first_generation_students": {
+				  "type": "double"
+				},
+				"aid.median_debt.number.overall": {
+				  "type": "integer"
+				},
+				"aid.median_debt.number.completers": {
+				  "type": "integer"
+				},
+				"aid.median_debt.number.noncompleters": {
+				  "type": "integer"
+				},
+				"aid.median_debt.number.income.0_30000": {
+				  "type": "integer"
+				},
+				"aid.median_debt.number.income.30001_75000": {
+				  "type": "integer"
+				},
+				"aid.median_debt.number.income.greater_than_75000": {
+				  "type": "integer"
+				},
+				"aid.median_debt.number.dependent_students": {
+				  "type": "integer"
+				},
+				"aid.median_debt.number.independent_students": {
+				  "type": "integer"
+				},
+				"aid.median_debt.number.pell_grant": {
+				  "type": "integer"
+				},
+				"aid.median_debt.number.no_pell_grant": {
+				  "type": "integer"
+				},
+				"aid.median_debt.number.female_students": {
+				  "type": "integer"
+				},
+				"aid.median_debt.number.male_students": {
+				  "type": "integer"
+				},
+				"aid.median_debt.number.first_generation_students": {
+				  "type": "integer"
+				},
+				"aid.median_debt.number.non_first_generation_students": {
+				  "type": "integer"
+				},
+				"aid.median_debt.completers.monthly_payments": {
+				  "type": "double"
+				},
+				"aid.cumulative_debt.number": {
+				  "type": "integer"
+				},
+				"aid.cumulative_debt.90th_percentile": {
+				  "type": "integer"
+				},
+				"aid.cumulative_debt.75th_percentile": {
+				  "type": "integer"
+				},
+				"aid.cumulative_debt.25th_percentile": {
+				  "type": "integer"
+				},
+				"aid.cumulative_debt.10th_percentile": {
+				  "type": "integer"
+				},
+				"student.family_income.overall": {
+				  "type": "integer"
+				},
+				"student.family_income.dependent_students": {
+				  "type": "integer"
+				},
+				"student.family_income.independent_students": {
+				  "type": "integer"
+				},
+				"student.valid_dependency_status": {
+				  "type": "integer"
+				},
+				"student.parents_education_level": {
+				  "type": "integer"
+				},
+				"student.FAFSA_applications": {
+				  "type": "integer"
+				},
+				"repayment.repayment_date.median": {
+				  "type": "keyword"
+				},
+				"completion.separation_date.median": {
+				  "type": "keyword"
+				},
+				"repayment.repayment_date.number": {
+				  "type": "integer"
+				},
+				"completion.separation_date.number": {
+				  "type": "integer"
+				},
+				"repayment.1_yr_repayment.overall": {
+				  "type": "integer"
+				},
+				"repayment.1_yr_repayment.completers": {
+				  "type": "integer"
+				},
+				"repayment.1_yr_repayment.noncompleters": {
+				  "type": "integer"
+				},
+				"repayment.1_yr_repayment.low_income": {
+				  "type": "integer"
+				},
+				"repayment.1_yr_repayment.middle_income": {
+				  "type": "integer"
+				},
+				"repayment.1_yr_repayment.high_income": {
+				  "type": "integer"
+				},
+				"repayment.1_yr_repayment.dependent_students": {
+				  "type": "integer"
+				},
+				"repayment.1_yr_repayment.independent_students": {
+				  "type": "integer"
+				},
+				"repayment.1_yr_repayment.pell_grant": {
+				  "type": "integer"
+				},
+				"repayment.1_yr_repayment.no_pell_grant": {
+				  "type": "integer"
+				},
+				"repayment.1_yr_repayment.female_students": {
+				  "type": "integer"
+				},
+				"repayment.1_yr_repayment.male_students": {
+				  "type": "integer"
+				},
+				"repayment.1_yr_repayment.first_generation_students": {
+				  "type": "integer"
+				},
+				"repayment.1_yr_repayment.non_first_generation_students": {
+				  "type": "integer"
+				},
+				"repayment.3_yr_repayment.overall": {
+				  "type": "integer"
+				},
+				"repayment.3_yr_repayment.completers": {
+				  "type": "integer"
+				},
+				"repayment.3_yr_repayment.noncompleters": {
+				  "type": "integer"
+				},
+				"repayment.3_yr_repayment.low_income": {
+				  "type": "integer"
+				},
+				"repayment.3_yr_repayment.middle_income": {
+				  "type": "integer"
+				},
+				"repayment.3_yr_repayment.high_income": {
+				  "type": "integer"
+				},
+				"repayment.3_yr_repayment.dependent_students": {
+				  "type": "integer"
+				},
+				"repayment.3_yr_repayment.independent_students": {
+				  "type": "integer"
+				},
+				"repayment.3_yr_repayment.pell_grant": {
+				  "type": "integer"
+				},
+				"repayment.3_yr_repayment.no_pell_grant": {
+				  "type": "integer"
+				},
+				"repayment.3_yr_repayment.female_students": {
+				  "type": "integer"
+				},
+				"repayment.3_yr_repayment.male_students": {
+				  "type": "integer"
+				},
+				"repayment.3_yr_repayment.first_generation_students": {
+				  "type": "integer"
+				},
+				"repayment.3_yr_repayment.non_first_generation_students": {
+				  "type": "integer"
+				},
+				"repayment.5_yr_repayment.overall": {
+				  "type": "integer"
+				},
+				"repayment.5_yr_repayment.completers": {
+				  "type": "integer"
+				},
+				"repayment.5_yr_repayment.noncompleters": {
+				  "type": "integer"
+				},
+				"repayment.5_yr_repayment.low_income": {
+				  "type": "integer"
+				},
+				"repayment.5_yr_repayment.middle_income": {
+				  "type": "integer"
+				},
+				"repayment.5_yr_repayment.high_income": {
+				  "type": "integer"
+				},
+				"repayment.5_yr_repayment.dependent_students": {
+				  "type": "integer"
+				},
+				"repayment.5_yr_repayment.independent_students": {
+				  "type": "integer"
+				},
+				"repayment.5_yr_repayment.pell_grant": {
+				  "type": "integer"
+				},
+				"repayment.5_yr_repayment.no_pell_grant": {
+				  "type": "integer"
+				},
+				"repayment.5_yr_repayment.female_students": {
+				  "type": "integer"
+				},
+				"repayment.5_yr_repayment.male_students": {
+				  "type": "integer"
+				},
+				"repayment.5_yr_repayment.first_generation_students": {
+				  "type": "integer"
+				},
+				"repayment.5_yr_repayment.non_first_generation_students": {
+				  "type": "integer"
+				},
+				"repayment.7_yr_repayment.overall": {
+				  "type": "integer"
+				},
+				"repayment.7_yr_repayment.completers": {
+				  "type": "integer"
+				},
+				"repayment.7_yr_repayment.noncompleters": {
+				  "type": "integer"
+				},
+				"repayment.7_yr_repayment.low_income": {
+				  "type": "integer"
+				},
+				"repayment.7_yr_repayment.middle_income": {
+				  "type": "integer"
+				},
+				"repayment.7_yr_repayment.high_income": {
+				  "type": "integer"
+				},
+				"repayment.7_yr_repayment.dependent_students": {
+				  "type": "integer"
+				},
+				"repayment.7_yr_repayment.independent_students": {
+				  "type": "integer"
+				},
+				"repayment.7_yr_repayment.pell_grant": {
+				  "type": "integer"
+				},
+				"repayment.7_yr_repayment.no_pell_grant": {
+				  "type": "integer"
+				},
+				"repayment.7_yr_repayment.female_students": {
+				  "type": "integer"
+				},
+				"repayment.7_yr_repayment.male_students": {
+				  "type": "integer"
+				},
+				"repayment.7_yr_repayment.first_generation_students": {
+				  "type": "integer"
+				},
+				"repayment.7_yr_repayment.non_first_generation_students": {
+				  "type": "integer"
+				},
+				"earnings.student_count": {
+				  "type": "integer"
+				},
+				"aid.students_with_any_loan": {
+				  "type": "double"
+				},
+				"student.students_with_pell_grant": {
+				  "type": "double"
+				},
+				"student.demographics.age_entry": {
+				  "type": "integer"
+				},
+				"student.demographics.age_entry_squared": {
+				  "type": "integer"
+				},
+				"student.demographics.over_23_at_entry": {
+				  "type": "double"
+				},
+				"student.demographics.female_share": {
+				  "type": "double"
+				},
+				"student.demographics.married": {
+				  "type": "double"
+				},
+				"student.demographics.dependent": {
+				  "type": "double"
+				},
+				"student.demographics.veteran": {
+				  "type": "double"
+				},
+				"student.demographics.first_generation": {
+				  "type": "double"
+				},
+				"student.demographics.avg_family_income": {
+				  "type": "integer"
+				},
+				"student.demographics.median_family_income": {
+				  "type": "integer"
+				},
+				"student.demographics.avg_family_income_independents": {
+				  "type": "integer"
+				},
+				"student.demographics.avg_family_income_log": {
+				  "type": "integer"
+				},
+				"student.demographics.avg_family_income_independents_log": {
+				  "type": "integer"
+				},
+				"student.demographics.share_white.home_ZIP": {
+				  "type": "double"
+				},
+				"student.demographics.share_black.home_ZIP": {
+				  "type": "double"
+				},
+				"student.demographics.share_asian.home_ZIP": {
+				  "type": "double"
+				},
+				"student.demographics.share_hispanic.home_ZIP": {
+				  "type": "double"
+				},
+				"student.demographics.share_bachelors_degree_age25.home_ZIP": {
+				  "type": "double"
+				},
+				"student.demographics.share_professional_degree_age25.home_ZIP": {
+				  "type": "double"
+				},
+				"student.demographics.share_born_US.home_ZIP": {
+				  "type": "double"
+				},
+				"student.demographics.median_hh_income": {
+				  "type": "integer"
+				},
+				"student.demographics.poverty_rate": {
+				  "type": "double"
+				},
+				"student.demographics.unemployment": {
+				  "type": "double"
+				},
+				"student.demographics.median_hh_income_log": {
+				  "type": "integer"
+				},
+				"student.fafsa_sent.overall": {
+				  "type": "integer"
+				},
+				"student.fafsa_sent.1_college": {
+				  "type": "double"
+				},
+				"student.fafsa_sent.2_colleges": {
+				  "type": "double"
+				},
+				"student.fafsa_sent.3_college": {
+				  "type": "double"
+				},
+				"student.fafsa_sent.4_colleges": {
+				  "type": "double"
+				},
+				"student.fafsa_sent.5_or_more_colleges": {
+				  "type": "double"
+				},
+				"earnings.10_yrs_after_entry.not_working_not_enrolled.overall": {
+				  "type": "integer"
+				},
+				"earnings.10_yrs_after_entry.working_not_enrolled.overall": {
+				  "type": "integer"
+				},
+				"earnings.10_yrs_after_entry.working_not_enrolled.mean_earnings": {
+				  "type": "integer"
+				},
+				"earnings.10_yrs_after_entry.median": {
+				  "type": "integer"
+				},
+				"earnings.10_yrs_after_entry.working_not_enrolled.earnings_percentile.10": {
+				  "type": "integer"
+				},
+				"earnings.10_yrs_after_entry.working_not_enrolled.earnings_percentile.25": {
+				  "type": "integer"
+				},
+				"earnings.10_yrs_after_entry.working_not_enrolled.earnings_percentile.75": {
+				  "type": "integer"
+				},
+				"earnings.10_yrs_after_entry.working_not_enrolled.earnings_percentile.90": {
+				  "type": "integer"
+				},
+				"earnings.10_yrs_after_entry.working_not_enrolled.std_dev": {
+				  "type": "integer"
+				},
+				"earnings.10_yrs_after_entry.working_not_enrolled.income.lowest_tercile": {
+				  "type": "integer"
+				},
+				"earnings.10_yrs_after_entry.working_not_enrolled.income.middle_tercile": {
+				  "type": "integer"
+				},
+				"earnings.10_yrs_after_entry.working_not_enrolled.income.highest_tercile": {
+				  "type": "integer"
+				},
+				"earnings.10_yrs_after_entry.working_not_enrolled.dependent_students_lowest_tercile": {
+				  "type": "integer"
+				},
+				"earnings.10_yrs_after_entry.working_not_enrolled.dependent_students": {
+				  "type": "integer"
+				},
+				"earnings.10_yrs_after_entry.independent_students": {
+				  "type": "integer"
+				},
+				"earnings.10_yrs_after_entry.female_students": {
+				  "type": "integer"
+				},
+				"earnings.10_yrs_after_entry.male_students": {
+				  "type": "integer"
+				},
+				"earnings.10_yrs_after_entry.percent_greater_than_25000": {
+				  "type": "double"
+				},
+				"earnings.10_yrs_after_entry.percent_greater_than_28000": {
+				  "type": "double"
+				},
+				"earnings.10_yrs_after_entry.mean_earnings.lowest_tercile": {
+				  "type": "integer"
+				},
+				"earnings.10_yrs_after_entry.mean_earnings.middle_tercile": {
+				  "type": "integer"
+				},
+				"earnings.10_yrs_after_entry.mean_earnings.highest_tercile": {
+				  "type": "integer"
+				},
+				"earnings.10_yrs_after_entry.mean_earnings.dependent_students_lowest_tercile": {
+				  "type": "integer"
+				},
+				"earnings.10_yrs_after_entry.mean_earnings.dependent_students": {
+				  "type": "integer"
+				},
+				"earnings.10_yrs_after_entry.mean_earnings.independent_students": {
+				  "type": "integer"
+				},
+				"earnings.10_yrs_after_entry.mean_earnings.female_students": {
+				  "type": "integer"
+				},
+				"earnings.10_yrs_after_entry.mean_earnings.male_students": {
+				  "type": "integer"
+				},
+				"earnings.6_yrs_after_entry.not_working_not_enrolled.overall": {
+				  "type": "integer"
+				},
+				"earnings.6_yrs_after_entry.working_not_enrolled.overall": {
+				  "type": "integer"
+				},
+				"earnings.6_yrs_after_entry.working_not_enrolled.mean_earnings": {
+				  "type": "integer"
+				},
+				"earnings.6_yrs_after_entry.median": {
+				  "type": "integer"
+				},
+				"earnings.6_yrs_after_entry.working_not_enrolled.earnings_percentile.10": {
+				  "type": "integer"
+				},
+				"earnings.6_yrs_after_entry.working_not_enrolled.earnings_percentile.25": {
+				  "type": "integer"
+				},
+				"earnings.6_yrs_after_entry.working_not_enrolled.earnings_percentile.75": {
+				  "type": "integer"
+				},
+				"earnings.6_yrs_after_entry.working_not_enrolled.earnings_percentile.90": {
+				  "type": "integer"
+				},
+				"earnings.6_yrs_after_entry.working_not_enrolled.std_dev": {
+				  "type": "integer"
+				},
+				"earnings.6_yrs_after_entry.working_not_enrolled.income.lowest_tercile": {
+				  "type": "integer"
+				},
+				"earnings.6_yrs_after_entry.working_not_enrolled.income.middle_tercile": {
+				  "type": "integer"
+				},
+				"earnings.6_yrs_after_entry.working_not_enrolled.income.highest_tercile": {
+				  "type": "integer"
+				},
+				"earnings.6_yrs_after_entry.working_not_enrolled.dependent_students_lowest_tercile": {
+				  "type": "integer"
+				},
+				"earnings.6_yrs_after_entry.working_not_enrolled.dependent_students": {
+				  "type": "integer"
+				},
+				"earnings.6_yrs_after_entry.independent_students": {
+				  "type": "integer"
+				},
+				"earnings.6_yrs_after_entry.female_students": {
+				  "type": "integer"
+				},
+				"earnings.6_yrs_after_entry.male_students": {
+				  "type": "integer"
+				},
+				"earnings.6_yrs_after_entry.percent_greater_than_25000": {
+				  "type": "double"
+				},
+				"earnings.6_yrs_after_entry.percent_greater_than_28000": {
+				  "type": "double"
+				},
+				"earnings.6_yrs_after_entry.mean_earnings.lowest_tercile": {
+				  "type": "double"
+				},
+				"earnings.6_yrs_after_entry.mean_earnings.middle_tercile": {
+				  "type": "double"
+				},
+				"earnings.6_yrs_after_entry.mean_earnings.highest_tercile": {
+				  "type": "double"
+				},
+				"earnings.6_yrs_after_entry.mean_earnings.dependent_students_lowest_tercile": {
+				  "type": "double"
+				},
+				"earnings.6_yrs_after_entry.mean_earnings.dependent_students": {
+				  "type": "double"
+				},
+				"earnings.6_yrs_after_entry.mean_earnings.independent_students": {
+				  "type": "double"
+				},
+				"earnings.6_yrs_after_entry.mean_earnings.female_students": {
+				  "type": "double"
+				},
+				"earnings.6_yrs_after_entry.mean_earnings.male_students": {
+				  "type": "double"
+				},
+				"earnings.7_yrs_after_entry.not_working_not_enrolled": {
+				  "type": "double"
+				},
+				"earnings.7_yrs_after_entry.working_not_enrolled": {
+				  "type": "integer"
+				},
+				"earnings.7_yrs_after_entry.mean_earnings": {
+				  "type": "double"
+				},
+				"earnings.7_yrs_after_entry.std_dev": {
+				  "type": "double"
+				},
+				"earnings.7_yrs_after_entry.percent_greater_than_25000": {
+				  "type": "double"
+				},
+				"earnings.8_yrs_after_entry.not_working_not_enrolled": {
+				  "type": "integer"
+				},
+				"earnings.8_yrs_after_entry.working_not_enrolled": {
+				  "type": "integer"
+				},
+				"earnings.8_yrs_after_entry.mean_earnings": {
+				  "type": "double"
+				},
+				"earnings.8_yrs_after_entry.median_earnings": {
+				  "type": "double"
+				},
+				"earnings.8_yrs_after_entry.10th_percentile_earnings": {
+				  "type": "integer"
+				},
+				"earnings.8_yrs_after_entry.25th_percentile_earnings": {
+				  "type": "integer"
+				},
+				"earnings.8_yrs_after_entry.75th_percentile_earnings": {
+				  "type": "integer"
+				},
+				"earnings.8_yrs_after_entry.90th_percentile_earnings": {
+				  "type": "integer"
+				},
+				"earnings.8_yrs_after_entry.std_deviation": {
+				  "type": "double"
+				},
+				"earnings.8_yrs_after_entry.percent_greater_than_25000": {
+				  "type": "double"
+				},
+				"earnings.8_yrs_after_entry.percent_greater_than_28000": {
+				  "type": "double"
+				},
+				"earnings.9_yrs_after_entry.not_working_not_enrolled": {
+				  "type": "integer"
+				},
+				"earnings.9_yrs_after_entry.working_not_enrolled": {
+				  "type": "integer"
+				},
+				"earnings.9_yrs_after_entry.mean_earnings": {
+				  "type": "double"
+				},
+				"earnings.9_yrs_after_entry.std_deviation": {
+				  "type": "double"
+				},
+				"earnings.9_yrs_after_entry.percent_greater_than_25000": {
+				  "type": "double"
+				},
+				"aid.median_debt_suppressed.overall": {
+				  "type": "double"
+				},
+				"aid.median_debt_suppressed.completers.overall": {
+				  "type": "double"
+				},
+				"aid.median_debt_suppressed.completers.monthly_payments": {
+				  "type": "double"
+				},
+				"repayment.3_yr_repayment_suppressed.overall": {
+				  "type": "double"
+				},
+				"repayment.3_yr_repayment_suppressed.income.low_income": {
+				  "type": "double"
+				},
+				"repayment.3_yr_repayment_suppressed.income.middle_income": {
+				  "type": "double"
+				},
+				"repayment.3_yr_repayment_suppressed.income.high_income": {
+				  "type": "double"
+				},
+				"repayment.3_yr_repayment_suppressed.completers": {
+				  "type": "double"
+				},
+				"repayment.3_yr_repayment_suppressed.non_completers": {
+				  "type": "double"
+				},
+				"repayment.3_yr_repayment_suppressed.dependent_students": {
+				  "type": "double"
+				},
+				"repayment.3_yr_repayment_suppressed.independent_students": {
+				  "type": "double"
+				},
+				"repayment.3_yr_repayment_suppressed.pell_grant": {
+				  "type": "double"
+				},
+				"repayment.3_yr_repayment_suppressed.no_pell_grant": {
+				  "type": "double"
+				},
+				"repayment.3_yr_repayment_suppressed.female_students": {
+				  "type": "double"
+				},
+				"repayment.3_yr_repayment_suppressed.male_students": {
+				  "type": "double"
+				},
+				"repayment.3_yr_repayment_suppressed.first_generation_students": {
+				  "type": "double"
+				},
+				"repayment.3_yr_repayment_suppressed.non_first_generation_students": {
+				  "type": "double"
+				},
+				"completion.rate_suppressed.lt_four_year_150percent": {
+				  "type": "double"
+				},
+				"completion.rate_suppressed.four_year": {
+				  "type": "double"
+				},
+				"completion.rate_suppressed.lt_four_year": {
+				  "type": "double"
+				},
+				"completion.rate_suppressed.four_year_200percent": {
+				  "type": "double"
+				},
+				"school.alias": {
+				  "type": "keyword"
+				},
+				"completion.completion_rate_4yr_100nt": {
+				  "type": "double"
+				},
+				"completion.completion_cohort_4yr_100nt": {
+				  "type": "integer"
+				},
+				"completion.completion_rate_less_than_4yr_100nt": {
+				  "type": "double"
+				},
+				"completion.completion_cohort_less_than_4yr_100nt": {
+				  "type": "integer"
+				},
+				"completion.transfer_rate.4yr.full_time": {
+				  "type": "double"
+				},
+				"completion.transfer_rate.cohort_4yr.full_time": {
+				  "type": "integer"
+				},
+				"completion.transfer_rate.less_than_4yr.full_time": {
+				  "type": "double"
+				},
+				"completion.transfer_rate.cohort_less_than_4yr.full_time": {
+				  "type": "integer"
+				},
+				"school.institutional_characteristics.level": {
+				  "type": "integer"
+				},
+				"student.demographics.men": {
+				  "type": "double"
+				},
+				"student.demographics.women": {
+				  "type": "double"
+				},
+				"repayment.2_yr_default_rate_denom": {
+				  "type": "integer"
+				},
+				"repayment.3_yr_default_rate_denom": {
+				  "type": "integer"
+				},
+				"school.open_admissions_policy": {
+				  "type": "integer"
+				},
+				"student.undergrads_with_pell_grant_or_federal_student_loan": {
+				  "type": "integer"
+				},
+				"student.undergrads_non_degree_seeking": {
+				  "type": "integer"
+				},
+				"student.grad_students": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_4yr_150_white": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_4yr_150_black": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_4yr_150_hispanic": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_4yr_150_asian": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_4yr_150_aian": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_4yr_150_nhpi": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_4yr_150_2ormore": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_4yr_150_nonresident.alien": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_4yr_150_race.unknown": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_less_than_4yr_150_white": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_less_than_4yr_150_black": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_less_than_4yr_150_hispanic": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_less_than_4yr_150_asian": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_less_than_4yr_150_aian": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_less_than_4yr_150_nhpi": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_less_than_4yr_150_2ormore": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_less_than_4yr_150_nonresident.alien": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_less_than_4yr_150_race.unknown": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_4yr_150_white_pre2010": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_4yr_150_black_pre2010": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_4yr_150_api_pre2010": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_4yr_150_aian_pre2010": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_4yr_150_hispanic_pre2010": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_less_than_4yr_150_white_pre2010": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_less_than_4yr_150_black_pre2010": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_less_than_4yr_150_api_pre2010": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_less_than_4yr_150_aian_pre2010": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_less_than_4yr_150_hispanic_pre2010": {
+				  "type": "integer"
+				},
+				"school.accreditor_code": {
+				  "type": "keyword"
+				},
+				"school.title_iv.approval_date": {
+				  "type": "keyword"
+				},
+				"completion.outcome_cohort.full_time.first_time.6yr": {
+				  "type": "integer"
+				},
+				"completion.outcome_percentage.full_time.first_time.6yr.award": {
+				  "type": "double"
+				},
+				"completion.outcome_cohort.full_time.first_time.8yr": {
+				  "type": "integer"
+				},
+				"completion.outcome_percentage.full_time.first_time.8yr.award": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage.full_time.first_time.8yr.still_enrolled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage.full_time.first_time.8yr.transfer": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage.full_time.first_time.8yr.unknown": {
+				  "type": "double"
+				},
+				"completion.outcome_cohort.part_time.first_time.6yr": {
+				  "type": "integer"
+				},
+				"completion.outcome_percentage.part_time.first_time.6yr.award": {
+				  "type": "double"
+				},
+				"completion.outcome_cohort.part_time.first_time.8yr": {
+				  "type": "integer"
+				},
+				"completion.outcome_percentage.part_time.first_time.8yr.award": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage.part_time.first_time.8yr.still_enrolled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage.part_time.first_time.8yr.transfer": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage.part_time.first_time.8yr.unknown": {
+				  "type": "double"
+				},
+				"completion.outcome_cohort.full_time.not_first_time.6yr": {
+				  "type": "integer"
+				},
+				"completion.outcome_percentage.full_time.not_first_time.6yr.award": {
+				  "type": "double"
+				},
+				"completion.outcome_cohort.full_time.not_first_time.8yr": {
+				  "type": "integer"
+				},
+				"completion.outcome_percentage.full_time.not_first_time.8yr.award": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage.full_time.not_first_time.8yr.still_enrolled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage.full_time.not_first_time.8yr.transfer": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage.full_time.not_first_time.8yr.unknown": {
+				  "type": "double"
+				},
+				"completion.outcome_cohort.part_time.not_first_time.6yr": {
+				  "type": "integer"
+				},
+				"completion.outcome_percentage.part_time.not_first_time.6yr.award": {
+				  "type": "double"
+				},
+				"completion.outcome_cohort.part_time.not_first_time.8yr": {
+				  "type": "integer"
+				},
+				"completion.outcome_percentage.part_time.not_first_time.8yr.award": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage.part_time.not_first_time.8yr.still_enrolled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage.part_time.not_first_time.8yr.transfer": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage.part_time.not_first_time.8yr.unknown": {
+				  "type": "double"
+				},
+				"student.retention_rate.four_year.full_time_pooled": {
+				  "type": "double"
+				},
+				"student.retention_rate.lt_four_year.full_time_pooled": {
+				  "type": "double"
+				},
+				"student.retention_rate.four_year.part_time_pooled": {
+				  "type": "double"
+				},
+				"student.retention_rate.lt_four_year.part_time_pooled": {
+				  "type": "double"
+				},
+				"student.retention_rate.cohort.four_year.full_time_pooled": {
+				  "type": "double"
+				},
+				"student.retention_rate.cohort.lt_four_year.full_time_pooled": {
+				  "type": "double"
+				},
+				"student.retention_rate.cohort.four_year.part_time_pooled": {
+				  "type": "double"
+				},
+				"student.retention_rate.cohort.lt_four_year.part_time_pooled": {
+				  "type": "double"
+				},
+				"student.retention_rate.pooled_yrs_used.full_time": {
+				  "type": "integer"
+				},
+				"student.retention_rate.pooled_yrs_used.part_time": {
+				  "type": "integer"
+				},
+				"student.retention_rate_suppressed.four_year.full_time_pooled": {
+				  "type": "double"
+				},
+				"student.retention_rate_suppressed.lt_four_year.full_time_pooled": {
+				  "type": "double"
+				},
+				"student.retention_rate_suppressed.four_year.part_time_pooled": {
+				  "type": "double"
+				},
+				"student.retention_rate_suppressed.lt_four_year.part_time_pooled": {
+				  "type": "double"
+				},
+				"completion.transfer_rate.4yr.full_time_pooled": {
+				  "type": "double"
+				},
+				"completion.transfer_rate.less_than_4yr.full_time_pooled": {
+				  "type": "double"
+				},
+				"completion.transfer_rate.cohort_4yr.full_time_pooled": {
+				  "type": "integer"
+				},
+				"completion.transfer_rate.cohort_less_than_4yr.full_time_pooled": {
+				  "type": "integer"
+				},
+				"completion.transfer_rate_suppressed.4yr.full_time_pooled": {
+				  "type": "double"
+				},
+				"completion.transfer_rate_suppressed.less_than_4yr.full_time_pooled": {
+				  "type": "double"
+				},
+				"completion.completion_rate_four_year_100_pooled": {
+				  "type": "double"
+				},
+				"completion.completion_rate_lt_four_year_100_pooled": {
+				  "type": "double"
+				},
+				"completion.completion_cohort_four_year_100_pooled": {
+				  "type": "integer"
+				},
+				"completion.completion_cohort_lt_four_year_100_pooled": {
+				  "type": "integer"
+				},
+				"completion.pooled_yrs_used_100": {
+				  "type": "integer"
+				},
+				"completion.rate_suppressed.four_year_100_pooled": {
+				  "type": "double"
+				},
+				"completion.rate_suppressed.lt_four_year_100_pooled": {
+				  "type": "double"
+				},
+				"completion.completion_rate_four_year_150_pell": {
+				  "type": "double"
+				},
+				"completion.completion_cohort_four_year_150_pell": {
+				  "type": "integer"
+				},
+				"completion.completion_rate_lt_four_year_150_pell": {
+				  "type": "double"
+				},
+				"completion.completion_cohort_lt_four_year_150_pell": {
+				  "type": "integer"
+				},
+				"completion.completion_rate_four_year_150_loan_nopell": {
+				  "type": "double"
+				},
+				"completion.completion_cohort_four_year_150_loan_nopell": {
+				  "type": "integer"
+				},
+				"completion.completion_rate_lt_four_year_150_loan_nopell": {
+				  "type": "double"
+				},
+				"completion.completion_cohort_lt_four_year_150_loan_nopell": {
+				  "type": "integer"
+				},
+				"completion.completion_rate_four_year_150_noloan_nopell": {
+				  "type": "double"
+				},
+				"completion.completion_cohort_four_year_150_noloan_nopell": {
+				  "type": "integer"
+				},
+				"completion.completion_rate_lt_four_year_150_noloan_nopell": {
+				  "type": "double"
+				},
+				"completion.completion_cohort_lt_four_year_150_noloan_nopell": {
+				  "type": "integer"
+				},
+				"completion.outcome_cohort.full_time.first_time.6yr_pooled": {
+				  "type": "integer"
+				},
+				"completion.outcome_percentage.full_time.first_time.6yr.award_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_cohort.full_time.first_time.8yr_pooled": {
+				  "type": "integer"
+				},
+				"completion.outcome_percentage.full_time.first_time.8yr.award_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage.full_time.first_time.8yr.still_enrolled_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage.full_time.first_time.8yr.transfer_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage.full_time.first_time.8yr.unknown_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_cohort.part_time.first_time.6yr_pooled": {
+				  "type": "integer"
+				},
+				"completion.outcome_percentage.part_time.first_time.6yr.award_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_cohort.part_time.first_time.8yr_pooled": {
+				  "type": "integer"
+				},
+				"completion.outcome_percentage.part_time.first_time.8yr.award_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage.part_time.first_time.8yr.still_enrolled_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage.part_time.first_time.8yr.transfer_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage.part_time.first_time.8yr.unknown_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_cohort.full_time.not_first_time.6yr_pooled": {
+				  "type": "integer"
+				},
+				"completion.outcome_percentage.full_time.not_first_time.6yr.award_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_cohort.full_time.not_first_time.8yr_pooled": {
+				  "type": "integer"
+				},
+				"completion.outcome_percentage.full_time.not_first_time.8yr.award_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage.full_time.not_first_time.8yr.still_enrolled_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage.full_time.not_first_time.8yr.transfer_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage.full_time.not_first_time.8yr.unknown_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_cohort.part_time.not_first_time.6yr_pooled": {
+				  "type": "integer"
+				},
+				"completion.outcome_percentage.part_time.not_first_time.6yr.award_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_cohort.part_time.not_first_time.8yr_pooled": {
+				  "type": "integer"
+				},
+				"completion.outcome_percentage.part_time.not_first_time.8yr.award_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage.part_time.not_first_time.8yr.still_enrolled_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage.part_time.not_first_time.8yr.transfer_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage.part_time.not_first_time.8yr.unknown_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_years.full_time.first_time": {
+				  "type": "integer"
+				},
+				"completion.outcome_years.part_time.first_time": {
+				  "type": "integer"
+				},
+				"completion.outcome_years.full_time.not_first_time": {
+				  "type": "integer"
+				},
+				"completion.outcome_years.part_time.not_first_time": {
+				  "type": "integer"
+				},
+				"completion.outcome_percentage_suppressed.full_time.first_time.6yr.award_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage_suppressed.full_time.first_time.8yr.award_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage_suppressed.full_time.first_time.8yr.still_enrolled_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage_suppressed.full_time.first_time.8yr.transfer_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage_suppressed.full_time.first_time.8yr.unknown_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage_suppressed.part_time.first_time.6yr.award_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage_suppressed.part_time.first_time.8yr.award_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage_suppressed.part_time.first_time.8yr.still_enrolled_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage_suppressed.part_time.first_time.8yr.transfer_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage_suppressed.part_time.first_time.8yr.unknown_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage_suppressed.full_time.not_first_time.6yr.award_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage_suppressed.full_time.not_first_time.8yr.award_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage_suppressed.full_time.not_first_time.8yr.still_enrolled_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage_suppressed.full_time.not_first_time.8yr.transfer_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage_suppressed.full_time.not_first_time.8yr.unknown_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage_suppressed.part_time.not_first_time.6yr.award_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage_suppressed.part_time.not_first_time.8yr.award_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage_suppressed.part_time.not_first_time.8yr.still_enrolled_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage_suppressed.part_time.not_first_time.8yr.transfer_pooled": {
+				  "type": "double"
+				},
+				"completion.outcome_percentage_suppressed.part_time.not_first_time.8yr.unknown_pooled": {
+				  "type": "double"
+				},
+				"completion.rate_suppressed.overall": {
+				  "type": "double"
+				},
+				"cost.avg_net_price.overall": {
+				  "type": "integer"
+				},
+				"student.retention_rate.overall.full_time": {
+				  "type": "double"
+				},
+				"academics.program.degree.agriculture": {
+				  "type": "integer"
+				},
+				"academics.program.degree.resources": {
+				  "type": "integer"
+				},
+				"academics.program.degree.architecture": {
+				  "type": "integer"
+				},
+				"academics.program.degree.ethnic_cultural_gender": {
+				  "type": "integer"
+				},
+				"academics.program.degree.communication": {
+				  "type": "integer"
+				},
+				"academics.program.degree.communications_technology": {
+				  "type": "integer"
+				},
+				"academics.program.degree.computer": {
+				  "type": "integer"
+				},
+				"academics.program.degree.personal_culinary": {
+				  "type": "integer"
+				},
+				"academics.program.degree.education": {
+				  "type": "integer"
+				},
+				"academics.program.degree.engineering": {
+				  "type": "integer"
+				},
+				"academics.program.degree.engineering_technology": {
+				  "type": "integer"
+				},
+				"academics.program.degree.language": {
+				  "type": "integer"
+				},
+				"academics.program.degree.family_consumer_science": {
+				  "type": "integer"
+				},
+				"academics.program.degree.legal": {
+				  "type": "integer"
+				},
+				"academics.program.degree.english": {
+				  "type": "integer"
+				},
+				"academics.program.degree.humanities": {
+				  "type": "integer"
+				},
+				"academics.program.degree.library": {
+				  "type": "integer"
+				},
+				"academics.program.degree.biological": {
+				  "type": "integer"
+				},
+				"academics.program.degree.mathematics": {
+				  "type": "integer"
+				},
+				"academics.program.degree.military": {
+				  "type": "integer"
+				},
+				"academics.program.degree.multidiscipline": {
+				  "type": "integer"
+				},
+				"academics.program.degree.parks_recreation_fitness": {
+				  "type": "integer"
+				},
+				"academics.program.degree.philosophy_religious": {
+				  "type": "integer"
+				},
+				"academics.program.degree.theology_religious_vocation": {
+				  "type": "integer"
+				},
+				"academics.program.degree.physical_science": {
+				  "type": "integer"
+				},
+				"academics.program.degree.science_technology": {
+				  "type": "integer"
+				},
+				"academics.program.degree.psychology": {
+				  "type": "integer"
+				},
+				"academics.program.degree.security_law_enforcement": {
+				  "type": "integer"
+				},
+				"academics.program.degree.public_administration_social_service": {
+				  "type": "integer"
+				},
+				"academics.program.degree.social_science": {
+				  "type": "integer"
+				},
+				"academics.program.degree.construction": {
+				  "type": "integer"
+				},
+				"academics.program.degree.mechanic_repair_technology": {
+				  "type": "integer"
+				},
+				"academics.program.degree.precision_production": {
+				  "type": "integer"
+				},
+				"academics.program.degree.transportation": {
+				  "type": "integer"
+				},
+				"academics.program.degree.visual_performing": {
+				  "type": "integer"
+				},
+				"academics.program.degree.health": {
+				  "type": "integer"
+				},
+				"academics.program.degree.business_marketing": {
+				  "type": "integer"
+				},
+				"academics.program.degree.history": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.agriculture": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.resources": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.architecture": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.ethnic_cultural_gender": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.communication": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.communications_technology": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.computer": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.personal_culinary": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.education": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.engineering": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.engineering_technology": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.language": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.family_consumer_science": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.legal": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.english": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.humanities": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.library": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.biological": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.mathematics": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.military": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.multidiscipline": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.parks_recreation_fitness": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.philosophy_religious": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.theology_religious_vocation": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.physical_science": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.science_technology": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.psychology": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.security_law_enforcement": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.public_administration_social_service": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.social_science": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.construction": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.mechanic_repair_technology": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.precision_production": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.transportation": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.visual_performing": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.health": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.business_marketing": {
+				  "type": "integer"
+				},
+				"academics.program.degree_or_certificate.history": {
+				  "type": "integer"
+				},
+				"academics.program_available.certificate": {
+				  "type": "boolean"
+				},
+				"academics.program_available.assoc": {
+				  "type": "boolean"
+				},
+				"academics.program_available.bachelors": {
+				  "type": "boolean"
+				},
+				"academics.program_available.assoc_or_bachelors": {
+				  "type": "boolean"
+				},
+				"academics.program_available.assoc_or_bachelors_or_certificate": {
+				  "type": "boolean"
+				}
+    }
+  }
+}
